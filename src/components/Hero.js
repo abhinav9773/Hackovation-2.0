@@ -42,7 +42,7 @@ const Hero = () => {
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bungee text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 drop-shadow-2xl mb-4 animate-fadeIn break-words">
           ⚔ Hackovation <br className="block md:hidden" /> 2.0
         </h1>
-        <p className="text-white/90 text-base sm:text-lg md:text-xl mb-8 max-w-xl animate-fadeIn animation-delay-500">
+        <p className="text-white/90 text-base font-bold sm:text-lg md:text-xl mb-8 max-w-xl animate-fadeIn animation-delay-500">
           36 Hours of Coding, Creativity & Clash Royale Vibes! <br />
           Form your team, compete & conquer.
         </p>
