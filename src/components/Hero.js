@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // ✅ import Link
 import clash1 from "../assets/clash1.png";
 import clash2 from "../assets/clash2.png";
 import clash3 from "../assets/clash3.png";
@@ -46,9 +47,12 @@ const Hero = () => {
           36 Hours of Coding, Creativity & Clash Royale Vibes! <br />
           Form your team, compete & conquer.
         </p>
-        <button className="px-8 sm:px-10 py-2 sm:py-3 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white font-bungee rounded-full shadow-lg hover:scale-105 transition-transform duration-300 animate-fadeIn animation-delay-1000">
-          Register Now
-        </button>
+        {/* ✅ Register Button */}
+        <Link to="/register">
+          <button className="mt-4 px-8 py-4 text-xl font-bold text-white bg-fuchsia-600 rounded-2xl shadow-lg hover:bg-fuchsia-700 transition duration-300">
+            Register Now
+          </button>
+        </Link>
       </div>
 
       <style>
@@ -84,7 +88,6 @@ const Hero = () => {
           .animation-delay-500 {
             animation-delay: 0.5s;
           }
-
           @keyframes float1 {
             0%,100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
