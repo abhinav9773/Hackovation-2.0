@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // ✅ Import navigate hook
 import clash1 from "../assets/clash1.png";
 import clash2 from "../assets/clash2.png";
 import clash3 from "../assets/clash3.png";
 
 const Hero = () => {
+  const navigate = useNavigate(); // ✅ create navigate instance
+
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-black">
       {/* Floating orbs */}
@@ -46,7 +49,12 @@ const Hero = () => {
           36 Hours of Coding, Creativity & Clash Royale Vibes! <br />
           Form your team, compete & conquer.
         </p>
-        <button className="px-8 sm:px-10 py-2 sm:py-3 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white font-bungee rounded-full shadow-lg hover:scale-105 transition-transform duration-300 animate-fadeIn animation-delay-1000">
+
+        {/* ✅ Updated button to navigate */}
+        <button
+          onClick={() => navigate("/register")}
+          className="px-8 sm:px-10 py-2 sm:py-3 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white font-bungee rounded-full shadow-lg hover:scale-105 transition-transform duration-300 animate-fadeIn animation-delay-1000"
+        >
           Register Now
         </button>
       </div>
